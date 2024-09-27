@@ -1,0 +1,3 @@
+This is a program meant to imitate one used by a post office to determine the postage cost of outgoing mail based off its dimensions and
+the zipcode it is being sent to and from. to find the cost of a piece of mail, the user must enter the its length, height, and thickness
+in inches, as well as the "from" and "to" zipcode, listed in that order, separated by commas.
