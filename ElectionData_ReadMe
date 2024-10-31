@@ -1,0 +1,2 @@
+When run, this program takes a speech by Donald Trump and one by Kamala Harris and puts the top 15 most common words from each (barring 
+excessively common words such as "the" or "is") into a csv file from which they can be plotted into a graph by opening the file in excel.
