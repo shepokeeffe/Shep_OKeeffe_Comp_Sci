@@ -7,6 +7,6 @@ Morning routine: Has the user go through an everyday morning and make choices.
 Password keeper: Stores the user's log-in info for websites.
 RPS: Rock, paper, scissors.
 # CS2
-Post office: Determine the postage cost for entered mail.
+Post office: Determines the postage cost for entered mail.
 Election data: Puts the 15 most common words from speeches by Trump and Harris into a csv file.
 TTT: Tic-tac-toe.
