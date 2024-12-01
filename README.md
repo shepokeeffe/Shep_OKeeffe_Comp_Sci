@@ -1,5 +1,4 @@
 # CS1
-Portfolio of programs created in CS1.
 Food-o-matic: A random insult generator.
 Function mashup: A compilation of functions.
 Magic 8-ball: Answers the user's questions randomly.
