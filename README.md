@@ -1,8 +1,12 @@
 # CS1
-Portfolio of programs created in CS1
-Food-o-matic: a random insult generator.
-Function mashup: a compilation of functions.
-Magic 8-ball: a "Magic 8-ball"-esque program that answers the user's question randomly.
-Morning routine: A "choose your own adventure"-esque program that has the user go through a morning routine.
-Password keeper: a "password keeper" with which the user can store their log-in info for websites.
-RPS: a "Rock, paper, scissors"-esque program that plays against the user with a random choice.
+Portfolio of programs created in CS1.
+Food-o-matic: A random insult generator.
+Function mashup: A compilation of functions.
+Magic 8-ball: Answers the user's questions randomly.
+Morning routine: Has the user go through an everyday morning and make choices.
+Password keeper: Stores the user's log-in info for websites.
+RPS: Rock, paper, scissors.
+# CS2
+Post office: Determine the postage cost for entered mail.
+Election data: Puts the 15 most common words from speeches by Trump and Harris into a csv file.
+TTT: Tic-tac-toe.
