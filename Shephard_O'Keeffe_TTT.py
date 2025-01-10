@@ -4,13 +4,16 @@ Date: 11/31/24
 Description: Tic-tac-toe. The user can play a bot or another user (on the same device) as many times as they want.
 Bugs: stops working if fewer than 2 names are entered in 2 player mode
 Sources: CS classes
+Log: 1/8/25 - Made a change to allow players to enter uppercase "X" or "O" when selecting their letter; fixed a bug that caused an
+error when the game tied in 1 player mode with the bot as X
+1/10/25 - Altered the look of the board to be less cluttered and more uniform
 """
 import random
 import time
 
 def check_choice(letter):
     '''
-    gets where the player wants to put their letter and checks if their choice is available 
+    desc: gets where the player wants to put their letter and checks if their choice is available 
     args:
         letter (str) - the current player's letter
     returns:
@@ -28,7 +31,7 @@ def check_choice(letter):
 
 def check_bot_choice():
     '''
-    chooses a random available location on the board in which the bot's letter can be placed
+    desc: chooses a random available location on the board in which the bot's letter can be placed
     returns:
         bot_choice (int) - the location on the board where the bot's letter will go
     '''
@@ -41,7 +44,7 @@ def check_bot_choice():
 
 def place_letter(letter, player_choice):
     '''
-    finds the player's chosen location on the board and puts their letter there
+    desc: finds the player's chosen location on the board and puts their letter there
     args:
         letter (str) - the current player's letter
         player_choice (int) - the location on the board where the player wants to put their letter 
@@ -52,12 +55,15 @@ def place_letter(letter, player_choice):
         for column in range(3):
             if board[row][column] == player_choice:
                 board[row][column] = letter
-    for i in board:
-        print(i)
+
+    for row in range(len(board)):
+        for column in range(len(board[row])):
+            print(board[row][column], end=' ')
+        print()
 
 def check_win(letter):
     '''
-    checks all possible win conditions to see if the player has won the game
+    desc: checks all possible win conditions to see if the player has won the game
     args:
         letter (str) - the current player's letter
     returns:
@@ -77,7 +83,7 @@ while True:
     board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]    
     play = input("Would you like to play Tic Tac Toe? ")
     
-    if play == "yes":
+    if play == "yes" or play == "y":
         while True:
             players = input("1 or 2 players? ")
             
@@ -86,10 +92,12 @@ while True:
                 while True:
                     letter = input("Would you like to play as X or O? ")
                                         
-                    if letter == "x":
+                    if letter == "x" or letter == "X":
                         #Player as X and bot as O
-                        for i in board:
-                            print(i)
+                        for row in range(len(board)):
+                            for column in range(len(board[row])):
+                                print(board[row][column], end=' ')
+                            print()
                         #Plays the game with a max of 9 plays (for 9 spots on the board), ending when someone wins
                         for i in range(0, 4):
                             x_choice = check_choice("X")
@@ -112,7 +120,7 @@ while True:
                                 print("It's a tie!")
                         break
                     
-                    if letter == "o":
+                    if letter == "o" or letter == "O":
                         #Bot as X and player as O
                         #Plays the game with a max of 9 plays (for 9 spots on the board), ending when someone wins
                         for i in range(0, 4):
@@ -128,7 +136,7 @@ while True:
                                 break
                             time.sleep(1) #waits a second before continuing
                         if check_win("O") != "win" and check_win("X") != "win":
-                            x_choice = check_bot_choice("X")
+                            x_choice = check_bot_choice()
                             place_letter("X", x_choice)
                             if check_win("X") == "win":
                                 print("You lose!")
@@ -150,8 +158,10 @@ while True:
                     if o_player != x_player:
                         break
                 print(f"{x_player} plays as x, {o_player} plays as o")
-                for i in board:
-                    print(i)
+                for row in range(len(board)):
+                    for column in range(len(board[row])):
+                        print(board[row][column], end=' ')
+                    print()
                 #Plays the game with a max of 9 plays (for 9 spots on the board), ending when someone wins
                 for i in range(0, 4):
                     x_choice = check_choice("X")
@@ -176,7 +186,7 @@ while True:
             else:
                 print("What? ")
     
-    elif play == "no":
+    elif play == "no" or play == "n":
         print("See ya!")
         break
     
